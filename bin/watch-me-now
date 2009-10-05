@@ -1,10 +1,4 @@
 #!/usr/bin/env ruby
-# For use with http://github.com/mynyml/watchr
-#
-# Run me with:
-#
-#   $ watchr watchit.watchr
- 
 # --------------------------------------------------
 # Convenience Methods
 # --------------------------------------------------
