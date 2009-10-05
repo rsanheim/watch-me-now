@@ -27,9 +27,13 @@ def run_test_matching(thing_to_match)
 end
 
 def run(files_to_run)
-  cmd = "ruby -I#{test_folder} #{files_to_run}"
-  puts cmd
-  system("ruby -I#{test_folder} #{files_to_run}")
+  if files_to_run.strip.empty?
+    puts "No files to run"
+  else
+    cmd = "ruby -I#{test_folder} #{files_to_run}"
+    puts cmd
+    system("ruby -I#{test_folder} #{files_to_run}")
+  end
 end
 
 def run_all_tests
