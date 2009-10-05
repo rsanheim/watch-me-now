@@ -5,7 +5,9 @@
 
 if __FILE__ == $0
   exec("watchr #{__FILE__}")
-end
+else
+
+require 'watchr'
 
 def test_folder
   @test_folder ||= %w[spec specs examples test].detect { |p| File.directory?(p) }
@@ -66,4 +68,6 @@ Signal.trap 'INT' do
     Kernel.sleep 1.5
     run_all_tests
   end
+end
+
 end
