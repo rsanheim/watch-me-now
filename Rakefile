@@ -18,4 +18,5 @@ end
 
 task :default => :check_dependencies
 
+desc "Push it real good"
 task :push => ['release', 'gemcutter:release']
