@@ -5,27 +5,27 @@
 
 Gem::Specification.new do |s|
   s.name = %q{watch-me-now}
-  s.version = "0.2.2"
+  s.version = "1.0.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Rob Sanheim"]
   s.date = %q{2009-10-04}
-  s.default_executable = %q{watchit}
+  s.default_executable = %q{watch-me-now}
   s.description = %q{watchr provides flexible continuous testing.  watch-me-now is a simple script to try and test most types of Ruby projects}
   s.email = %q{rsanheim@gmail.com}
-  s.executables = ["watchit"]
+  s.executables = ["watch-me-now"]
   s.extra_rdoc_files = [
     "LICENSE",
-     "README.rdoc"
+     "README.markdown"
   ]
   s.files = [
     ".document",
      ".gitignore",
      "LICENSE",
-     "README.rdoc",
+     "README.markdown",
      "Rakefile",
      "VERSION",
-     "bin/watchit",
+     "bin/watch-me-now",
      "watch-me-now.gemspec"
   ]
   s.homepage = %q{http://github.com/rsanheim/watch-me-now}
