@@ -5,7 +5,7 @@ begin
   Jeweler::Tasks.new do |gem|
     gem.name = "watch-me-now"
     gem.summary = %Q{script to continuous test any sort of Ruby project}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.description = %Q{watchr provides flexible continuous testing.  watch-me-now is a simple script to try and test most types of Ruby projects}
     gem.email = "rsanheim@gmail.com"
     gem.homepage = "http://github.com/rsanheim/watch-me-now"
     gem.authors = ["Rob Sanheim"]
