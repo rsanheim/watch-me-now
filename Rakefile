@@ -17,3 +17,5 @@ rescue LoadError
 end
 
 task :default => :check_dependencies
+
+task :push => ['release', 'gemcutter:release']
