@@ -19,3 +19,4 @@ A small script that builds on [watchr](http://github.com/mynyml/watchr) to try a
 
 * Rails projects of different shapes and sizes
 * Cucumber features
+* Toggle spork via command line switch?
