@@ -9,3 +9,13 @@ A small script that builds on [watchr](http://github.com/mynyml/watchr) to try a
     gem install watch-me-now --source http://gemcutter.org
     cd YOUR_PROJECT
     watchr watch-me-now.rb
+    
+## Supported
+
+* ruby libraries
+* rubygems (anything with /lib and a top level test folder, basically)
+
+## TODO
+
+* Rails projects of different shapes and sizes
+* Cucumber features
