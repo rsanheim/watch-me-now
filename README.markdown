@@ -8,4 +8,4 @@ A small script that builds on [watchr](http://github.com/mynyml/watchr) to try a
 
     gem install watch-me-now --source http://gemcutter.org
     cd YOUR_PROJECT
-    watch-me-now
+    watchr watch-me-now.rb
