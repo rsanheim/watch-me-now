@@ -2,12 +2,12 @@
 # Convenience Methods
 # --------------------------------------------------
 def test_folder
-  @test_folder ||= %w[spec specs examples test].detect { |p| File.directory?(p) }
+  @test_folder ||= %w[spec examples test].detect { |p| File.directory?(p) }
 end
 
 def test_suffix
   case test_folder
-  when "spec", "specs" then "spec"
+  when "spec" then "spec"
   when "examples" then "example"
   when "test" then "test"
   end
