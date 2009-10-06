@@ -34,11 +34,17 @@ def run(files_to_run)
     puts cmd
     system("ruby -I#{test_folder} #{files_to_run}")
   end
+  no_int_for_you
 end
 
 def run_all_tests
   run(all_test_files.join(' '))
 end
+
+def no_int_for_you
+  @sent_an_int = nil
+end
+
 
 
 # --------------------------------------------------
