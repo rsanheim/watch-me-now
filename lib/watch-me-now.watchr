@@ -17,6 +17,10 @@ def all_test_files
   Dir["#{test_folder}/**/*_#{test_suffix}.rb"]
 end
 
+def runner
+  ENV["WATCHR_RUNNER"] || "ruby"
+end
+
 def run_test_matching(thing_to_match)
   matches = all_test_files.grep /#{thing_to_match}/i
   if matches.empty?
@@ -30,9 +34,9 @@ def run(files_to_run)
   if files_to_run.strip.empty?
     puts "No files to run"
   else
-    cmd = "ruby -I#{test_folder} #{files_to_run}"
+    cmd = "#{runner} -I#{test_folder} #{files_to_run}"
     puts cmd
-    system("ruby -I#{test_folder} #{files_to_run}")
+    system cmd
   end
   no_int_for_you
 end
