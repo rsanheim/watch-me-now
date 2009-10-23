@@ -11,7 +11,6 @@ begin
     gem.authors = ["Rob Sanheim"]
     gem.add_dependency "watchr"
     gem.add_development_dependency "gemcutter"
-    
   end
   Jeweler::GemcutterTasks.new
 rescue LoadError
