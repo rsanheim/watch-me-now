@@ -1,3 +1,13 @@
 #!/usr/bin/env ruby
 # This doesnt work - use 'watchr watch-me-now.rb'
-system("watchr watch-me-now.rb")
+# require 'rubygems'
+require 'watchr'
+# gem 'watch-me-now'
+
+def find_in_load_path(path)
+  dir = (['.'] + $LOAD_PATH).uniq.detect {|p| Pathname(p).join(path).exist? }
+  dir ? path.expand_path(dir) : nil
+end
+
+absolute_path = find_in_load_path(Pathname("watch-me-now.rb")) or abort("no script found in load path: watch-me-now.rb")
+Watchr::Controller.new(Watchr::Script.new(absolute_path), Watchr.handler.new).run
