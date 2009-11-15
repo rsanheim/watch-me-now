@@ -1,8 +1,5 @@
 #!/usr/bin/env ruby
-# This doesnt work - use 'watchr watch-me-now.rb'
-# require 'rubygems'
 require 'watchr'
-# gem 'watch-me-now'
 
 def find_in_load_path(path)
   dir = (['.'] + $LOAD_PATH).uniq.detect {|p| Pathname(p).join(path).exist? }
