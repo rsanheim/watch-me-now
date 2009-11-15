@@ -22,7 +22,7 @@ def runner
 end
 
 def run_test_matching(thing_to_match)
-  matches = all_test_files.grep /#{thing_to_match}/i
+  matches = all_test_files.grep(/#{thing_to_match}/i)
   if matches.empty?
     puts "Sorry, thanks for playing, but there were no matches for #{thing_to_match}"  
   else
@@ -35,8 +35,8 @@ def run(files_to_run)
     puts "No files to run"
   else
     cmd = "#{runner} -I#{test_folder} #{files_to_run}"
-    puts cmd
-    system cmd
+    puts("> #{cmd}")
+    system(cmd)
   end
   no_int_for_you
 end
