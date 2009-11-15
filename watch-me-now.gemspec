@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Rob Sanheim"]
-  s.date = %q{2009-11-14}
+  s.date = %q{2009-11-15}
   s.default_executable = %q{watch-me-now}
   s.description = %q{watchr provides flexible continuous testing.  watch-me-now is a simple script to try and test most types of Ruby projects}
   s.email = %q{rsanheim@gmail.com}

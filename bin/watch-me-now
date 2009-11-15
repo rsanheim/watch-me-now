@@ -1,3 +1,3 @@
 #!/usr/bin/env ruby
 # This doesnt work - use 'watchr watch-me-now.rb'
-exec("watchr watch-me-now.rb")
+system("watchr watch-me-now.rb")
