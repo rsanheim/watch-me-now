@@ -57,7 +57,7 @@ watch("^#{test_folder}/(.*)_#{test_suffix}\.rb") { |m| run_test_matching(m[1]) }
 watch("^#{test_folder}/(.*)\.rb") { |m| run_test_matching(m[1]) }
 watch("^#{test_folder}/#{test_suffix}_helper\.rb") { run_all_tests }
 
-watch('^features/(.*)') { system "cucumber --tags @fit features/other/" }
+watch('^features/(.*)') { system "cucumber --tags @wip features" }
 
 # --------------------------------------------------
 # Signal Handling
