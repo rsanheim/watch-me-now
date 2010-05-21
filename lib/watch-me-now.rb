@@ -30,19 +30,23 @@ def run_test_matching(thing_to_match)
   end
 end
 
+def run_all_tests
+  run(all_test_files.join(' '))
+end
+
 def run(files_to_run)
   if files_to_run.strip.empty?
     puts "No files to run"
   else
     cmd = "#{runner} -I#{test_folder} #{files_to_run}"
-    puts("> #{cmd}")
-    system(cmd)
+    execute cmd
   end
   no_int_for_you
 end
 
-def run_all_tests
-  run(all_test_files.join(' '))
+def execute(cmd)
+  puts("> #{cmd}")
+  system(cmd)
 end
 
 def no_int_for_you
@@ -57,7 +61,7 @@ watch("^#{test_folder}/(.*)_#{test_suffix}\.rb") { |m| run_test_matching(m[1]) }
 watch("^#{test_folder}/(.*)\.rb") { |m| run_test_matching(m[1]) }
 watch("^#{test_folder}/#{test_suffix}_helper\.rb") { run_all_tests }
 
-watch('^features/(.*)') { system "cucumber --tags @wip features" }
+watch('^features/(.*)') { execute "cucumber --tags @wip features" }
 
 # --------------------------------------------------
 # Signal Handling
