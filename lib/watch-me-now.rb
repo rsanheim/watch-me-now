@@ -5,6 +5,10 @@ def test_folder
   @test_folder ||= %w[spec examples test].detect { |p| File.directory?(p) }
 end
 
+def include_lib_folder_if_exists
+  "-Ilib" if File.directory?("lib")
+end
+
 def test_suffix
   case test_folder
   when "spec" then "spec"
@@ -38,7 +42,7 @@ def run(files_to_run)
   if files_to_run.strip.empty?
     puts "No files to run"
   else
-    cmd = "#{runner} -I#{test_folder} #{files_to_run}"
+    cmd = "#{runner} #{include_lib_folder_if_exists} -I#{test_folder} #{files_to_run}"
     execute cmd
   end
   no_int_for_you
