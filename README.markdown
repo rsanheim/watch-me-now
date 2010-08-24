@@ -6,9 +6,9 @@ A small script that builds on [watchr](http://github.com/mynyml/watchr) to try a
 
 ## Usage
 
-    gem install watch-me-now --source http://gemcutter.org
+    gem install watch-me-now
     cd YOUR_PROJECT
-    watchr watch-me-now.rb
+    watch-me-now
     
 ## Supported
 
